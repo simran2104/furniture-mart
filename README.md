@@ -1,5 +1,4 @@
-# 🛋️ Sarvotam Furniture
-
+# 🛋️ Furniture Mart - Sarvotam Furniture
 ### A home with a story.
 
 **Sarvotam Furniture** is a full-stack furniture e-commerce web application built with **Django**. The platform provides a modern shopping experience where users can browse furniture products, view product details, manage their shopping cart, create accounts, and place orders.
