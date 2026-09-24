@@ -1,40 +1,115 @@
-# Sarvotam Furniture
+# 🛋️ Sarvotam Furniture
 
-A Django furniture discovery, showroom enquiry, and web analytics demonstration for Sarvotam Furniture, Yamunanagar.
+### A home with a story.
 
-## Run locally
+**Sarvotam Furniture** is a full-stack furniture e-commerce web application built with **Django**. The platform provides a modern shopping experience where users can browse furniture products, view product details, manage their shopping cart, create accounts, and place orders.
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
+🌐 **Live Website:** [furniture-mart-ps3p.onrender.com](https://furniture-mart-ps3p.onrender.com/)
+
+---
+
+## ✨ Features
+
+* 🛋️ Browse furniture products
+* 🔎 View detailed product information
+* 🛒 Add products to the shopping cart
+* ➕ Update product quantities in the cart
+* 👤 User registration and authentication
+* 📦 Place and manage orders
+* 💳 E-commerce checkout workflow
+* 📱 Responsive and user-friendly interface
+* 🔐 Django-based backend and authentication
+* 🗄️ Database-driven product and order management
+
+---
+
+## 🖥️ Tech Stack
+
+### Backend
+
+* **Python**
+* **Django**
+
+### Frontend
+
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Bootstrap**
+
+### Database
+
+* **SQLite** for development
+
+### Deployment
+
+* **Render**
+
+### Version Control
+
+* **Git**
+* **GitHub**
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to run Sarvotam Furniture locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/simran2104/furniture-mart.git
+cd furniture-mart
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+### 4. Apply database migrations
+
+```bash
 python manage.py migrate
-python manage.py seed_store
+```
+
+### 5. Create a superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+### 6. Start the development server
+
+```bash
 python manage.py runserver
 ```
 
-Open `http://127.0.0.1:8000/`.
+Open your browser and visit:
 
-The seed command creates 900 catalogue products, 56 categories, and a development admin account:
+```text
+http://127.0.0.1:8000/
+```
 
-- Username: `demo-admin`
-- Password: `SarvotamDemo2026!`
-
-Change this password before using the project beyond local demonstration. No production credentials are included.
-
-## Main routes
-
-- `/` homepage
-- `/products/` paginated catalogue and search
-- `/category/<slug>/` category catalogue
-- `/product/<slug>/` product detail
-- `/cart/`, `/wishlist/`, `/enquiry/`, `/showroom/`
-- `/register/`, `/accounts/login/`, `/account/`
-- `/admin/` Django administration
-- `/admin/analytics/` demo analytics dashboard
-
-## Notes
-
-The product catalogue uses seeded, replaceable image URLs and realistic generated furniture attributes. Cart and wishlist are session-backed for this demonstration. Enquiries and analytics events are stored in SQLite. Online payments are intentionally not implemented: customers shortlist online and complete selection and payment at the physical showroom.
-
-Analytics uses the provider-neutral `AnalyticsEvent` model and `/api/analytics/events/` endpoint. Events include page views, product views, searches, cart actions, wishlist actions, enquiry starts/submissions, registration, and showroom requests.
